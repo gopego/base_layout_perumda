@@ -173,3 +173,27 @@ a.link {
 /* End Menu */
 
 /* End Sidebar */
+
+/* mitra supplier hover */
+
+a.link1{
+    color:#141414;
+}
+a.link1:hover{
+    color: #2fb344;
+}
+
+/* end mitra supplier hover */
+
+/* warna button action tabel */
+
+.bg-pink{
+    background-color: #fd6470;
+}
+
+.bg-pink:hover{
+    background-color: #c21422;
+    color: black;
+}
+
+/* end warna button action tabel */
