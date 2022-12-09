@@ -170,6 +170,15 @@ a.link {
     text-decoration: none;
 }
 
+.tombolview {
+    background-color: #FD0499;
+    width: 100px;
+    height: 35px;
+    color: white;
+    border-color: unset;
+    border-radius: 7px;
+}
+
 /* End Menu */
 
 /* End Sidebar */
