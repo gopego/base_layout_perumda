@@ -179,6 +179,10 @@ a.link {
     border-radius: 7px;
 }
 
+hr.solid {
+    border-top: 2px solid rgb(65, 63, 63);
+}
+
 /* End Menu */
 
 /* End Sidebar */
