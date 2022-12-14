@@ -183,6 +183,7 @@ a.link1:hover{
     color: #2fb344;
 }
 
+
 /* end mitra supplier hover */
 
 /* warna button action tabel */
@@ -197,3 +198,19 @@ a.link1:hover{
 }
 
 /* end warna button action tabel */
+
+/* table */
+
+:root {
+    font-size: 16px;
+    height: 100%;
+    --tblr-card-bg: #ffffff;
+    --tblr-card-bg-rgb: 255, 255, 255;
+    --tblr-border-color: #e6e7e9;
+    --tblr-border-color-rgb: 230, 231, 233;
+    --tblr-border-color-light: #2fb344;
+    --tblr-border-color-light-rgb: 242, 243, 244;
+  }
+
+  
+/* end table */
