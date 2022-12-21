@@ -225,5 +225,17 @@ a.link1:hover{
     --tblr-border-color-light-rgb: 242, 243, 244;
   }
 
+  .dropdown-menu .active {
+    color: #fff;
+    background-color:#5cb85c;
+  }
+
+  .dropdown-menu a:hover {
+
+    color: #fff;
+    background-color:#5cb85c;
+
+}
+
   
 /* end table */

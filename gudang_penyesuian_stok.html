@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Penyesuaian Stok</title>
+    <!-- CSS files -->
+    <link href="./assets/dist/css/tabler.css" rel="stylesheet" />
+    <link href="./assets/dist/css/tabler-vendors.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/dist/css/custome.css">
+    <link rel="stylesheet" href="./assets/plugin/leaflet.css">
+</head>
+
+<body>
+    <div class="page">
+        <!-- Sidebar -->
+        <div class="sidebar" id="getSidebar">
+            <div class="side-top p-3">
+                <div class="close d-flex justify-content-end" id="getClose">
+                    <img src="./assets/icon/close.png" alt="">
+                </div>
+                <!-- Logo -->
+                <a href="" class="logo-box">
+                    <div class="logo-brand d-flex justify-content-center">
+                        <img src="./assets/logo/logo.png" alt="" class="">
+                    </div>
+                </a>
+                <!-- End Logo -->
+            </div>
+
+            <!-- Menu -->
+            <div class="sidebar-group">
+                <ul class="sidebar-list ">
+                    <li>
+                        <div class="title">
+                            <a href="dashboard.html" class="link mb-2 mt-2">
+                                <img src="./assets/icon/Dashboard_white.png" alt="" class="icon">
+                                <span class="name">Dashboard</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="karyawan.html" class="link mb-2 mt-2">
+                                <img src="./assets/icon/Mitra_white.png" alt="" class="icon">
+                                <span class="name">Karyawan</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="active">
+                        <div class="title">
+                            <a href="mitra_supplier.html" class="link mb-2 mt-2">
+                                <img src="./assets/icon/partner.png" alt="" class="icon">
+                                <span class="name">Mitra</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/Product_white.png" alt="" class="icon">
+                                <span class="name">Produk</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/warehouse_white.png" alt="" class="icon">
+                                <span class="name">Pergudangan</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/penjualan_white.png" alt="" class="icon">
+                                <span class="name">Penjualan</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/Pengiriman_white.png" alt="" class="icon">
+                                <span class="name">Pengiriman</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/operasional.png" alt="" class="icon">
+                                <span class="name">Operasional</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/Financial_white.png" alt="" class="icon">
+                                <span class="name">Financial</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/RKAB_white.png" alt="" class="icon">
+                                <span class="name">RKAPB</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/KPI_white.png" alt="" class="icon">
+                                <span class="name">KPI</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/Quality_white.png" alt="" class="icon">
+                                <span class="name">Jaminan Mutu</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <a href="" class="link mb-2 mt-2">
+                                <img src="./assets/icon/Kegiatan_white.png" alt="" class="icon">
+                                <span class="name">Kegiatan</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Menu -->
+        </div>
+        <!-- End Sidebar -->
+        <header class="navbar navbar-expand-md navbar-light d-none d-lg-flex d-print-none sticky-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-nav flex-row order-md-last">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+                            aria-label="Open user menu">
+                            <span class="avatar avatar-sm"
+                                style="background-image: url(./assets/static/avatars/002f.jpg)"></span>
+                            <div class="d-none d-xl-block ps-2">
+                                <div>Andre</div>
+                                <div class="mt-1 small text-muted">Administrator</div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                            <a href="#" class="dropdown-item">Kembali</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-nav navbar-collapse" id="navbar-menu">
+                    <!-- Notification -->
+                    <div class="nav-item col-6 col-sm-4 col-md-2 col-xl-auto me-3">
+                        <button class="btn btn-rss w-100 btn-icon rounded-circle toggle-sidebar">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <line x1="4" y1="6" x2="20" y2="6"></line>
+                                <line x1="4" y1="12" x2="20" y2="12"></line>
+                                <line x1="4" y1="18" x2="20" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nav-item col-6 col-sm-4 col-md-2 col-xl-auto">
+                        <img src="./assets/logo/logo.png" alt="" height="40">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- start content -->
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                <div class="page-body">
+                    <h2>PERGUDANGAN BIDANG PERDAGANGAN</h2>
+                    <div class="row row-deck row-cards mt-1">
+
+                        <!-- start link nav -->
+                        <div class="col-12 mb-2">
+                            <div class="card card-sm shadow-sm">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-12 mb-2 my-md-auto">
+                                            <a href="#" class="link1 link active">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-database" width="24" height="24"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <ellipse cx="12" cy="6" rx="8" ry="3"></ellipse>
+                                                    <path d="M4 6v6a8 3 0 0 0 16 0v-6"></path>
+                                                    <path d="M4 12v6a8 3 0 0 0 16 0v-6"></path>
+                                                </svg>
+                                                <span class="fs-3">Pengadaan</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3 col-12 my-2 my-md-auto">
+                                            <a href="#" class="link1 link active dropdown-toggle"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-users" width="24" height="24"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="green" fill="none"
+                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <circle cx="9" cy="7" r="4"></circle>
+                                                    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                                                </svg>
+                                                <span class="fs-3 text-success">Penyimpanan</span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Opname</a></li>
+                                                <li><a class="dropdown-item" href="#">Spoil</a></li>
+                                                <li><a class="dropdown-item active" href="#">Penyesuaian</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-3 col-12 mt-2 my-md-auto">
+                                            <a href="#" class="link1 link">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="icon icon-tabler icon-tabler-building-store" width="24"
+                                                    height="24" viewBox="0 0 24 24" stroke-width="2"
+                                                    stroke="currentColor" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                    <line x1="3" y1="21" x2="21" y2="21"></line>
+                                                    <path
+                                                        d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4">
+                                                    </path>
+                                                    <line x1="5" y1="21" x2="5" y2="10.85"></line>
+                                                    <line x1="19" y1="21" x2="19" y2="10.85"></line>
+                                                    <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"></path>
+
+                                                </svg>
+                                                <span class="fs-3">Pengeluaran</span>
+
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end link nav -->
+
+                        <!-- start title nav -->
+                        <div class="col-12 col-md-12 mb-2">
+                            <div class="card card-sm shadow-sm">
+                                <div class="card-body">
+                                    <div class="col-12 fs-2 col-md-4">
+                                        <div>
+                                            <h4 class="fs-2 fw-normal mb-0 mt-0 fw-bold">Penyesuaian Stok</h4>
+                                        </div>
+                                        <div class="fs-6 pt-0">
+                                            <a href="gudang_penyesuian.html" class="text-decoration-underline">Data
+                                                Penyesuaian Stok</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end title nav -->
+
+                        <!-- start table -->
+                        <div class="col-12 col-md-12 mb-3">
+                            <div class="card card-sm shadow-sm">
+                                <div class="card">
+                                    <div class="card-body border-bottom-0">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 col-lg-8 ">
+                                              <h2>Data Penyesuaian Stok Pergudangan</h2>
+                                            </div>
+                                            <div class="d-flex col-12 col-md-6 col-lg-4">
+                                              
+                                                <input type="search" class="form-control" placeholder="Cari Produk ..." aria-label="Search" />
+                                              
+                                              <a href="#" class="btn btn-red btn-icon my-auto mx-2" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#upload">
+                                                <!-- Download SVG icon from http://tabler-icons.io/i/brand-dribbble -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-upload"
+                                                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round">
+                                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                  <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1"></path>
+                                                  <polyline points="9 15 12 12 15 15"></polyline>
+                                                  <line x1="12" y1="12" x2="12" y2="21"></line>
+                                                </svg>
+                                              </a>
+                          
+                                              <!-- Modal -->
+                                              <div class="modal fade" id="upload" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="uploadLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="uploadLabel">Upload Data Penyesuaian Stok Pergudangan</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <form>
+                                                        <div class="offset-lg-2 col-lg-8 my-3">
+                                                          <div class="mb-3">
+                                                            <label for="namadepan">Nama Produk</label>
+                                                            <input type="text" class="form-control">
+                                                          </div>
+                                                          <div class="mb-3">
+                                                            <label for="namadepan">Jumlah Stock Disesuaikan</label>
+                                                            <input type="text" class="form-control">
+                                                          </div>
+                                                          <div class="mb-3">
+                                                            <label for="namadepan">Stock Akhir</label>
+                                                            <input type="text" class="form-control">
+                                                          </div>
+                                                          <div class="col-12 d-flex justify-content-end">
+                                                            <button class="btn btn-primary w-20" type="submit">Upload</button>
+                          
+                                                          </div>
+                          
+                                                        </div>
+                                                      </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                          
+                                              <a href="#" class="btn btn-green btn-icon my-auto mx-2" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#download">
+                                                <!-- Download SVG icon from http://tabler-icons.io/i/brand-dribbble -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-download"
+                                                  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round">
+                                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                  <path d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4"></path>
+                                                  <line x1="12" y1="13" x2="12" y2="22"></line>
+                                                  <polyline points="9 19 12 22 15 19"></polyline>
+                                                </svg>
+                                              </a>
+                          
+                                              <div class="modal fade" id="download" data-bs-backdrop="static" data-bs-keyboard="false"
+                                                tabindex="-1" aria-labelledby="downloadLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="downloadLabel">Download Data Penyesuaian Stok Pergudangan</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                      <p>Download Data Penyesuaian Stok Pergudangan</p>
+                                                      <button type="button" class="btn btn-primary">Download</button>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                          
+                                              <a href="#" class="btn btn-yellow btn-icon my-auto mx-2" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#filter">
+                                                <!-- Download SVG icon from http://tabler-icons.io/i/brand-dribbble -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-filter" width="24"
+                                                  height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                  stroke-linecap="round" stroke-linejoin="round">
+                                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                  <path d="M5.5 5h13a1 1 0 0 1 .5 1.5l-5 5.5l0 7l-4 -3l0 -4l-5 -5.5a1 1 0 0 1 .5 -1.5"></path>
+                                                </svg>
+                                              </a>
+                          
+                                              <div class="modal fade" id="filter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="filterLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="filterLabel">Filter Data Penyesuaian Stok Pergudangan</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="input-group mb-3">
+                                                            <label class="input-group-text" for="inputGroupSelect02">Kategori</label>
+                                                            <select class="form-select" id="inputGroupSelect02">
+                                                              <option selected>Choose...</option>
+                                                              <option value="1">One</option>
+                                                              <option value="2">Two</option>
+                                                              <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="modal fade" id="fiturFilter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Filter</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect02">Kategori Mitra</label>
+                                <select class="form-select" id="inputGroupSelect03">
+                                  <option selected>Choose...</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-yellow">Filter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class="ms-2">
+                                        <div class="col-12 col-sm-12 overflow-x-scroll">
+                                            <div class="row container-fluid table-responsive">
+                                                <table class="table card-table align-content-center">
+                                                    <thead class="card-table">
+                                                        <tr>
+                                                            <th style="width: 6%;">
+                                                                <div class="form-control text-center text-capitalize fs-2">No</div>
+                                                            </th>
+                                                            <th style="width: 18%;">
+                                                                <div class="form-control fs-2 text-capitalize">Nama
+                                                                    Produk</div>
+                                                            </th>
+                                                            <th style="width: 18%;">
+                                                                <div class="form-control fs-2 text-capitalize">Jumlah
+                                                                    Stock Disesuaikan</div>
+                                                            </th>
+                                                            <th style="width: 18%;">
+                                                                <div class="form-control fs-2 text-capitalize">Stock
+                                                                    Akhir</div>
+                                                            </th>
+                                                            <th style="width: 10%;">
+                                                                <div
+                                                                    class="form-control fs-2 text-center text-capitalize">
+                                                                    Action</div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody style="width: auto;">
+                                                        <tr class="fs-2">
+                                                            <td class="fs- text-center">1</td>
+                                                            <td class="ps-3">Kopi Rojoku Pouds</td>
+                                                            <td class="ps-3">100 PCS</td>
+                                                            <td class="ps-3">500 PCS</td>
+                                                            <td>
+                                                                <div class="d-flex justify-content-center">
+                                                                    <a href="#"
+                                                                        class="btn btn-dribbble"
+                                                                        style="width: 50%">View</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fs-2">
+                                                            <td class="fs-2 text-center">2</td>
+                                                            <td class="ps-3">Kopi Rojoku Pouds</td>
+                                                            <td class="ps-3">100 PCS</td>
+                                                            <td class="ps-3">500 PCS</td>
+                                                            <td>
+                                                                <div class="d-flex justify-content-center">
+                                                                    <a href="#"
+                                                                        class="btn btn-dribbble"
+                                                                        style="width: 50%">View</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fs-2">
+                                                            <td class="fs-2 text-center">3</td>
+                                                            <td class="ps-3">Kopi Rojoku Pouds</td>
+                                                            <td class="ps-3">100 PCS</td>
+                                                            <td class="ps-3">500 PCS</td>
+                                                            <td>
+                                                                <div class="d-flex justify-content-center">
+                                                                    <a href="#"
+                                                                        class="btn btn-dribbble"
+                                                                        style="width: 50%">View</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="fs-2">
+                                                            <td class="fs-2 text-center">4</td>
+                                                            <td class="ps-3">Kopi Rojoku Pouds</td>
+                                                            <td class="ps-3">100 PCS</td>
+                                                            <td class="ps-3">500 PCS</td>
+                                                            <td>
+                                                                <div class="d-flex justify-content-center">
+                                                                    <a href="#"
+                                                                        class="btn btn-dribbble"
+                                                                        style="width: 50%">View</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <nav aria-label="...">
+                                                <ul class="pagination pagination-sm justify-content-end">
+                                                    <li class="page-item active" aria-current="page">
+                                                        <span class="page-link">1</span>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">3</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">4</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" tabindex="-1">. . . . </a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">99</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">100</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end table -->
+                    </div>
+                </div>
+            </div>
+            <!-- end content -->
+            <!-- Modal Filter -->
+            <div class="modal fade" id="fiturFilter" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Filter</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect02">Kategori Mitra</label>
+                                <select class="form-select" id="inputGroupSelect02">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-yellow">Filter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal Filter -->
+
+            <!-- Modal Upload -->
+            <div class="modal fade" id="modalUpload" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel1">Upload File</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="file" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            <button type="button" class="btn btn-primary">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal upload -->
+
+            <!-- start footer -->
+            <footer class="footer footer-transparent bg-success d-print-none">
+                <div class="container-xl">
+                    <div class="row text-center align-items-center justify-content-center">
+                        <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                            <ul class="list-inline list-inline-dots mb-0">
+                                <li class="list-inline-item">
+                                    <span class="fs-3 fw-bold">Smart Perumda Aneka Usaha Jepara © 2022</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+
+        </div>
+    </div>
+    <!-- Libs JS -->
+    <script src="./assets/dist/libs/apexcharts/dist/apexcharts.min.js" defer></script>
+    <!-- Tabler Core -->
+    <script src="./assets/dist/js/custome.js"></script>
+    <script src="./assets/dist/js/tabler.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
